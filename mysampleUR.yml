@@ -1,12 +1,12 @@
 ---
-- hosts: all
+- hosts: mywebservers
   become: yes
-  tasks:
-  - name: i want to install webserver on ubuntu18 node
-    apt:
-     name: apache2
-     state: present
-    when: ansible_os_family =="debian"
+  tasks: 
+  - name: i want to install web server on ubuntu16 nodes
+    apt: 
+      name: apache2
+      state: present
+    when: ansible_os_family =="Debian"
 
   - name: i want to install web server on RedHat node
     yum:
