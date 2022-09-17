@@ -1,5 +1,5 @@
 ---
-- hosts: mysampleUR
+- hosts: all
   become: yes
   tasks:
   - name: i want to install web server on ubuntu18 node
